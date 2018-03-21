@@ -1,0 +1,23 @@
+
+$mobileMax:980px;
+$imgPath:"../static/img/";
+
+@function vw($px) { 
+    @return ($px/640) *100  + vw;
+}
+
+@mixin bg($width, $height, $background) {
+    background-image: url($background);
+    background-repeat: no-repeat;
+    background-size:vw($width);
+    width: vw($width);
+    height: vw($height);
+}
+
+@mixin bgdt($width, $height, $background) {
+    background-image: url($background);
+    background-repeat: no-repeat;
+    background-size:$width;
+    width: $width;
+    height: $height;
+}

@@ -1,0 +1,136 @@
+@import '../static/mixins.scss';
+.all-stores-wrap{
+    padding-bottom: vw(50);
+}
+.all-stores{
+    background-color: #d01931;
+    color:#fff;
+    font-size: vw(32);
+    font-weight: 100;
+    font-family:NarkisBlockCondensedMF;
+    width: vw(400);
+    height: vw(60);
+    display: block;
+    margin-top: vw(30);
+    margin-right: auto;
+    margin-left: auto;
+        &.active{
+            background-color: gray;
+        }
+}
+.store-table{
+    border: vw(1) solid #d01931;
+    width: vw(580);
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: vw(50);
+    display: none;
+}
+
+.store-table.active{
+    display: block;
+}
+
+.table-row{
+color: #000;
+display: flex;
+font-size: vw(25);
+font-weight: 500;
+display: flex;
+align-items: center;
+}
+
+.city-branches .table-row:nth-child(odd){
+    background-color: rgba(255,255,255,.3);
+}
+
+.table-row-header{
+    color: #fff;
+     text-align: center;
+     background-color: #d01931;
+     height: vw(48);
+     font-size: vw(26);
+     font-weight: 500;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.branch-name{
+    width: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: vw(5) 0;
+    min-height: vw(55);
+    }
+    
+    .branch-details{
+        width: 50%;
+        text-align: center;
+        border-right:vw(1) solid #d01931;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: vw(5) 0;
+        min-height: vw(55);
+    }
+
+    .phone{
+        direction: ltr;
+    }
+
+@media only screen and(min-width:$mobileMax){
+    .all-stores-wrap{
+        margin-top: 0;
+        padding-bottom: 50px;
+    }
+    .all-stores{    
+        font-size: 32px;
+        width: 300px;
+        height: 60px;
+        cursor: pointer;
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: -80px;
+        &.active{
+            background-color: gray;
+        }
+    }
+
+    .store-table{
+        border: 1px solid #d01931;
+        max-width: 513px;
+        width: 100%;
+        margin-bottom: 50px;
+        display: none;
+    }
+    
+    .table-row{
+    font-size: 22px;
+    }
+    
+    .table-row-header{
+         height: 50px;
+         font-size: 22px;
+    }
+    
+    .branch-name{
+        padding: 5px 0;
+        min-height: 50px;
+        }
+        
+        .branch-details{
+            width: 50%;
+            text-align: center;
+            border-right:1px solid #d01931;
+            padding: 5px 0;
+            min-height: 50px;
+        }
+    
+        .phone{
+            direction: ltr;
+        }
+}

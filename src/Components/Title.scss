@@ -1,0 +1,44 @@
+@import '../static/mixins.scss';
+
+.main-title{
+    background-image: url($imgPath + 'mobile/symbol-reebok-white-opacity.png');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+    font-size:vw(80);
+    line-height: vw(70);
+    font-weight:bold;
+    width: vw(517);
+    margin: 0 auto;
+    text-align: center;
+    padding-top: vw(90);
+    white-space: pre-line;
+    min-height: vw(450);
+    box-sizing: border-box;
+
+    .main-title-reebok{
+        @include bg(320,65,$imgPath+'mobile/logo@2x.png');
+        margin: 0 auto vw(31);
+    }
+}
+
+
+@media only screen and(min-width:$mobileMax){
+    .main-title{
+        background-image: url($imgPath + 'desktop/symbol-reebok-white-opacity.png');
+        background-size: auto;
+        background-position: center top;
+        font-size:60px;
+        line-height: 50px;
+        width: auto;
+        min-height: 471px;
+        padding-top: 100px;
+        box-sizing: border-box;
+        margin-top: -96px;
+        .main-title-reebok{
+            @include bgdt(320px,65px,$imgPath+'desktop/logo@2x.png');
+            margin: 0 auto 20px;
+        }
+    }
+}
+

@@ -1,0 +1,69 @@
+@import '../static/mixins.scss';
+.time-to-run-wrap{
+    background-image: url($imgPath + 'mobile/logo-reebok-white-opacity.png');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: vw(635) vw(134);
+    font-size: vw(90);
+    font-weight: bold;
+    color:#d01931;
+    margin: 0 auto;
+    text-align: center;
+    line-height: vw(70);
+    white-space: pre-line;
+}
+.time-to-run{
+    position: relative;
+    top: vw(10)
+}
+
+.now-in-stores{
+    margin-top: vw(40);
+    font-size: vw(42);
+    line-height: vw(42);
+    font-weight: 500;
+    color:#000;
+    text-align: center;
+}
+
+.reebok{
+    @include bg(189,37,$imgPath + 'mobile/logo.png');
+    display: inline-block;
+}
+
+.mega{
+    @include bg(175,38,$imgPath + 'mobile/megasport-logo.png');
+    display: inline-block;
+}
+
+@media only screen and(min-width:$mobileMax){
+    .time-to-run-wrap{
+        background-image: url($imgPath + 'desktop/logo-reebok-white-opacity.png');
+        min-height: 301px;
+        background-size: auto;
+        white-space: normal;
+        font-size: 90px;
+        line-height: 80px;
+        box-sizing: border-box;
+        padding-top: 70px;
+    } 
+
+    .time-to-run{
+        position: relative;
+        top:0;
+    }
+
+    .now-in-stores{
+        margin-top: 0;
+        font-size: 22px;
+        line-height: normal;
+    }
+
+    .reebok{
+        @include bgdt(98px,19px,$imgPath + 'desktop/ree.png');
+    }
+    
+    .mega{
+        @include bgdt(91px,20px,$imgPath + 'desktop/megasport-logo.png');
+    }
+}

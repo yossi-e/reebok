@@ -1,0 +1,130 @@
+@import '../static/mixins.scss';
+
+.desc{
+    width: vw(579);
+    margin: vw(30) auto 0;
+}
+
+.know{
+    font-size:vw(50);
+    line-height: vw(50);
+    font-weight: bold;
+    margin-bottom: vw(-10);
+}
+
+.impact{
+    font-family: Impact;
+    font-size: vw(88);
+    line-height: vw(88);
+    color:#d01931;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.desc-text{
+    position: relative;
+    top:vw(-45);
+    white-space: pre-line;
+    font-size: vw(30);
+    z-index: 0;
+}
+
+.desc-text-in{
+    background-color: #efefe7;
+    padding: vw(78) vw(30) vw(97);
+}
+
+.shoe-wrap{
+    height:vw(479);
+    position: relative;
+    top:vw(-50);
+}
+
+.shoe{
+    @include bg(583,336,$imgPath+'mobile/shoe.png');
+    position: absolute;
+    top:0;
+    right: 0;
+    left:0;
+    bottom: 0;
+    margin: auto;
+
+}
+
+.red-box{
+    width:vw(507);
+    height:vw(479);
+    background-color: #d01931;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+@media only screen and(min-width:$mobileMax){
+    .desc{
+        width: 100%;
+        max-width: 1024px;
+        margin: 0 auto;
+        position: relative;
+    }
+    
+    .know{
+        font-size:50px;
+        line-height: 63px;
+        margin-bottom: 0;
+        position: absolute;
+        top: -80px;
+        right: 49px;
+    }
+    
+    .impact{
+        font-size: 88px;
+        line-height: 129.5px;
+        color:#d01931;
+        text-align: right;
+        position: absolute;
+        top:-60px;
+        right: 49px;
+    }
+    
+    .desc-text{
+        position: static;
+        top:0;
+        width: 100%;
+        max-width: 883px;
+        font-size: 24px;
+        z-index: 0;
+        padding: 0;
+        background-color: #efefe7;
+    }
+
+    .desc-text-in{
+        width: 515px;
+        padding: 79px 49px 72px;
+        background-color: transparent;
+    }
+    
+    .shoe-wrap{
+        height:479px;
+        position: absolute;
+        top:auto;
+        bottom: 60px;
+        left: 0px;
+    }
+    
+    .shoe{
+        @include bgdt(525px,302px,$imgPath+'desktop/layer-3.png');
+        position: absolute;
+        top:0;
+        right: 0;
+        left:0;
+        bottom: 0;
+        margin: auto;
+    
+    }
+    
+    .red-box{
+        width:377px;
+        height:479px;        
+    }
+}

@@ -1,0 +1,64 @@
+@import '../static/mixins.scss';
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    padding: vw(20);
+    position: relative;
+    z-index: 5;
+}
+
+.header-logo{
+    @include bg(254,51,$imgPath+'mobile/logo.png');
+}
+
+.header-share{
+    display: flex;
+}
+
+.header-share-instagram{
+    @include bg(51,50,$imgPath+'mobile/instagram.png');
+    cursor: pointer;
+    color: transparent;
+    overflow: hidden;
+}
+
+.header-share-facebook{
+    @include bg(51,50,$imgPath+'mobile/facebook.png');
+    margin-right:vw(23);
+    cursor: pointer;
+    color: transparent;
+    overflow: hidden;
+}
+
+.header-share-negishut{
+    @include bg(51,50,$imgPath+'mobile/negishut.png');
+    margin-right: vw(23);
+}
+
+@media only screen and(min-width:$mobileMax){
+    .header{
+        padding: 15px;
+        max-width: 1024px;
+        margin:0 auto;
+        align-items: center;
+    }
+
+    .header-logo{
+        @include bgdt(278px,56px,$imgPath+'desktop/5841914-ea-6515-b-1-e-0-ad-75-a-4-d.png');
+    } 
+
+    .header-share-instagram{
+        @include bgdt(35px,34px,$imgPath+'desktop/instagram.png');
+    }
+    
+    .header-share-facebook{
+        @include bgdt(35px,34px,$imgPath+'desktop/facebook.png');
+        margin-right:15px;
+    }
+    
+    .header-share-negishut{
+        @include bgdt(35px,34px,$imgPath+'desktop/negishut.png');
+        margin-right: 15px;
+    }
+}

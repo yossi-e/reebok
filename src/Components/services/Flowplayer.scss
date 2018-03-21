@@ -1,0 +1,57 @@
+@import '../../static/mixins.scss';
+@import url("https://player.ynet.co.il/fp74/skin/skin.css");
+
+.player-wrap{
+    background-image: url("../"+$imgPath+'mobile/circles.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: vw(50) 0;
+    position: relative;
+}
+
+.player-reebok{
+    @include bg(223,45,'../' + $imgPath + 'mobile/black-logo.png');
+    background-position: left bottom;
+    width: vw(580);
+    margin: 0 auto;
+    position: absolute;
+    top: vw(-10);
+    left: 0;
+    right: 0;
+}
+
+.flowplayer {
+    width: vw(580);
+    margin: 0 auto;
+    font-size: 12px;
+    direction: ltr;
+    display: block;
+}
+
+.fp-playlist{
+    display: none;
+}
+
+.flowplayer .fp-controls {
+    background-color: rgba(0, 0, 0, .5);
+}
+
+@media only screen and(min-width:$mobileMax){
+    .player-wrap{
+        background-image: url("../"+$imgPath+'desktop/circles.png');
+        background-position: center;
+        background-size: auto;
+        padding: 60px 0;
+        margin-top: 150px;
+    }
+
+    .player-reebok{
+        @include bgdt(168px,34px,'../' + $imgPath + 'desktop/layer-16.png');
+        width: 900px;
+        top: 10px;
+    }
+
+    .flowplayer {
+        width: 900px;
+    }
+}

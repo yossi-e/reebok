@@ -1,0 +1,101 @@
+@import '../static/mixins.scss';
+
+.item{
+    text-align: center;
+}
+
+.owl-wrap{
+    position: relative;
+}
+
+.nav-btns{
+    max-width: 1024px;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top:30%;
+}
+
+.owl-carousel{
+    margin-top: vw(140);
+}
+
+.owl-carousel .owl-item img {
+    width: auto !important;
+    height: vw(179);
+    margin: 0 auto;
+}
+
+.prev,.next{
+    color: transparent;
+    @include bg(21,36,$imgPath +"mobile/arrow-left.png");
+    position: absolute;
+    left: vw(30);
+    z-index: 3;
+}
+
+.next{
+    left:auto;
+    right: vw(30);
+    transform: rotate(180deg);
+}
+
+.gallery{
+display: flex;
+justify-content: space-between;
+align-items: center;
+width: vw(550);
+margin: vw(30) auto vw(165);
+}
+
+.gallery-img{
+    img{
+        height: vw(40);
+        width: auto;
+    }
+}
+
+
+@media only screen and(min-width:$mobileMax){
+    .item{
+        text-align: center;
+    }
+    
+    .owl-carousel{
+        max-width: 1024px;
+        margin: 220px auto 0; 
+    }
+    
+    .owl-carousel .owl-item img {
+        height: auto;
+        max-height: 405px;
+        margin: 0 auto;
+    }
+    
+    .prev,.next{
+        cursor: pointer;
+        color: transparent;
+        @include bgdt(26px,43px,$imgPath +"desktop/shape-1.png");
+        left: 20px;
+    }
+    
+    .next{
+        left:auto;
+        right: 20px;
+        transform: rotate(180deg);
+    }
+    
+    .gallery{
+        max-width: 1024px;
+        margin: 80px auto 0;
+    }
+    
+    .gallery-img{
+        
+        img{
+            height: 3.5vw;
+            cursor: pointer;
+        }
+    }
+}

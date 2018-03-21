@@ -1,0 +1,37 @@
+@import './mixins.scss';
+@import './fonts/NarkisBlockCondensedMF/stylesheet.css';
+@import './fonts/impact/stylesheet.css';
+
+body{
+    margin: 0;
+    font-family:NarkisBlockCondensedMF;
+}
+
+.App {
+    direction: rtl;
+    background-image:url(./img/mobile/bg.png);
+    background-attachment: fixed;
+}
+
+img{
+    border: 0;
+}
+
+.btn{
+    margin: 0;
+    padding:0;
+    border:0;
+    background-color:transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+#INDmenu-btn{
+    display: none;
+}
+
+@media only screen and(min-width:$mobileMax){
+    .App {
+        background-image:url(./img/desktop/bg.png);
+    }
+}
