@@ -14,9 +14,11 @@ class CityList extends Component {
 
         this.toggleTable = this.toggleTable.bind(this);
     }
+
     componentDidMount() {
         this.initStoreList();
     }
+
     initStoreList() {
         let result = {};
         stores.forEach(item => {
@@ -31,6 +33,7 @@ class CityList extends Component {
             storeData: result
         });
     }
+    
     loadData() {
         return Object.keys(this.state.storeData).map((item, index) =>
             <CityItem
@@ -52,12 +55,9 @@ class CityList extends Component {
         if (this.state.tableActive) {
             let height = document.getElementsByClassName("all-stores")[0].offsetTop;
             window.scrollTo(0, height);
-            push('Button_Clicked','Open');
+            push('Button_Clicked', 'Open');
         }
-        
-        else{
-            push('Button_Clicked','Closed');
-        }
+        push('Button_Clicked', 'Closed');
     }
 
     render() {
