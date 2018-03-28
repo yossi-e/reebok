@@ -23,19 +23,14 @@ class Carousel extends Component {
                 items: 1,
                 startPosition: 0,
                 loop: true,
-                onInitialized: this.fixSliderBug,
                 dots: false,
             },
             carousel: null,
         }
     }
 
-    fixSliderBug() {
-        window.dispatchEvent(new Event('resize'));
-    }
-
     componentDidMount() {
-
+        window.dispatchEvent(new Event('resize'));
     }
 
     slideToIndex(event) {
